@@ -4,126 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chill Zone</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 1rem;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        section {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        section#home {
-            background-color: #e2e2e2;
-        }
-
-        section#home .button {
-            background-color: #333;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        section#features ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        section#features ul li {
-            background-color: #ddd;
-            margin: 0.5rem 0;
-            padding: 0.5rem;
-            border-radius: 5px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-        }
-    </style>
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <!-- Open Graph meta tags for Discord embedding -->
     <meta property="og:title" content="Chill Zone">
     <meta property="og:description" content="Your place to relax, chat, and have fun. Join our community today!">
     <meta property="og:image" content="https://yourwebsite.com/image.jpg">
     <meta property="og:url" content="https://yourwebsite.com">
     <meta property="og:type" content="website">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #2c3e50 !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        .navbar-brand {
+            font-weight: 600;
+            color: #ecf0f1 !important;
+        }
+        .nav-link {
+            color: #bdc3c7 !important;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #ecf0f1 !important;
+        }
+        header {
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            color: white;
+            padding: 100px 0;
+        }
+        h1, h2 {
+            font-weight: 600;
+        }
+        .btn-custom {
+            background-color: #2ecc71;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #27ae60;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,.1);
+        }
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,.1);
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0,0,0,.15);
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #3498db;
+        }
+        footer {
+            background-color: #34495e;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Chill Zone</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Chill Zone</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4">Welcome to Chill Zone</h1>
+            <p class="lead mb-5">Your place to relax, chat, and have fun. Join our community today!</p>
+            <a href="https://discord.gg/your-invite-link" class="btn btn-custom btn-lg">Join Us on Discord</a>
+        </div>
     </header>
 
-    <section id="home">
-        <h2>Welcome to Chill Zone</h2>
-        <p>Your place to relax, chat, and have fun. Join our community today!</p>
-        <a href="https://discord.gg/your-invite-link" class="button">Join Us on Discord</a>
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">About Us</h2>
+            <p class="lead text-center">Chill Zone is a community where you can meet new friends, participate in fun events, and enjoy a relaxing atmosphere. Our server is dedicated to providing a safe and welcoming space for everyone.</p>
+        </div>
     </section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Chill Zone is a community where you can meet new friends, participate in fun events, and enjoy a relaxing atmosphere. Our server is dedicated to providing a safe and welcoming space for everyone.</p>
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Features</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card text-center p-4 mb-4">
+                        <i class="fas fa-comments feature-icon"></i>
+                        <h5>Active chat channels</h5>
+                        <p>Engage in lively discussions on various topics</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center p-4 mb-4">
+                        <i class="fas fa-calendar-alt feature-icon"></i>
+                        <h5>Regular events and activities</h5>
+                      <p>Participate in fun community events and games</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center p-4 mb-4">
+                        <i class="fas fa-star feature-icon"></i>
+                        <h5>Special roles and perks</h5>
+                        <p>Earn unique roles and enjoy exclusive benefits</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="features">
-        <h2>Features</h2>
-        <ul>
-            <li>Active chat channels</li>
-            <li>Regular events and activities</li>
-            <li>Special roles and perks</li>
-        </ul>
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <p class="lead text-center mb-4">If you have any questions or need assistance, feel free to reach out to our server admins or moderators.</p>
+            <div class="text-center">
+                <a href="#" class="btn btn-custom">Get in Touch</a>
+          </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or need assistance, feel free to reach out to our server admins or moderators.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Chill Zone. All rights reserved.</p>
+    <footer class="text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">© 2024 Chill Zone. All rights reserved. | Site designed by Daniel Ogden & Damon (mostly daniel)</p>
+        </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
